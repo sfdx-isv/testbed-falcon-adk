@@ -1,6 +1,6 @@
 {
-  "recipeName":     "ADK Sample Demo Recipe",
-  "description":    "Sample Recipe for Building an ADK Demo",
+  "recipeName":     "Falcon Test: Recipe 01",
+  "description":    "Test Recipe for Building an ADK Demo",
   "recipeType":     "appx:demo-recipe",
   "recipeVersion":  "1.0.0",
   "schemaVersion":  "0.1.2",
@@ -11,11 +11,11 @@
     "skipActions":      [],
     "targetOrgs": [
       {
-        "orgName":        "Scratch Org Demo",
-        "alias":          "sfdc_scratch-demo",
-        "description":    "Installs demo in a Scratch Org",
+        "orgName":        "Falcon Test: Recipe 01",
+        "alias":          "falcon-test-recipe-01",
+        "description":    "Falcon Test Scratch Org",
         "isScratchOrg":   true,
-        "scratchDefJson": "demo-scratch-def.json"
+        "scratchDefJson": "falcon-test-01-scratch-def.json"
       }
     ]
   },
@@ -23,7 +23,7 @@
     {
       "stepGroupName":  "Install Packages",
       "alias":          "install-packages",
-      "description":    "Installs all managed and unmanged packages required by the demo",
+      "description":    "Installs managed and unmanged packages required by this test",
       "recipeSteps": [
         { 
           "stepName":     "Install Falcon-X Managed Package",
@@ -86,7 +86,7 @@
           "description":  "Configures the Admin User based on demo-user-admin.json",
           "action":       "configure-admin-user",
           "options": {
-            "definitionFile": "demo-user-admin.json"
+            "definitionFile": "falcon-test-01-demo-user-admin.json"
           }
         },
         {
@@ -94,7 +94,7 @@
           "description":  "Creates a demo user based on demo-user-primary.json",
           "action":       "create-user",
           "options": {
-            "definitionFile": "demo-user-primary.json",
+            "definitionFile": "falcon-test-01-demo-user-primary.json",
             "sfdxUserAlias":  "sfdc_primary-demo-user"
           }
         },
@@ -103,7 +103,7 @@
           "description":  "Creates a demo user based on demo-user-secondary.json",
           "action":       "create-user",
           "options": {
-            "definitionFile": "demo-user-secondary.json",
+            "definitionFile": "falcon-test-01-demo-user-secondary.json",
             "sfdxUserAlias":  "sfdc_secondary-demo-user"
           }
         }
