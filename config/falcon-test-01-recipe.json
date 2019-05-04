@@ -6,7 +6,7 @@
   "schemaVersion":  "0.1.2",
   "options":  {
     "haltOnError":      true,
-    "noCustomInstall":  true,
+    "noCustomInstall":  false,
     "skipGroups":       [],
     "skipActions":      [],
     "targetOrgs": [
